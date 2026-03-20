@@ -1,13 +1,21 @@
 using UnityEngine;
-using TMPro; // MÁGICA: Esta linha é obrigatória para o Unity usar o teu texto!
+using TMPro; 
 
 public class PlayerInteraction : MonoBehaviour
 {
     public float rayDistance = 3f; 
     public bool temChave = false; 
-    
-    // A variável que vai guardar a tua caixa de texto do Canvas
     public TextMeshProUGUI textoNoEcra; 
+
+    public AudioSource altifalante; 
+    public AudioClip somChave;      
+    public AudioClip somPorta;      
+
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked; 
+        Cursor.visible = false;                   
+    }
 
     void Update()
     {
@@ -16,17 +24,20 @@ public class PlayerInteraction : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, rayDistance))
         {
-            // 1. O laser bateu numa CHAVE?
+            // 1. CHAVE
             if (hit.collider.CompareTag("Interativo"))
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     MostrarMensagem("Apanhaste a chave!"); 
                     temChave = true; 
-                    Destroy(hit.collider.gameObject); 
+                    
+                    if(somChave != null) altifalante.PlayOneShot(somChave);
+
+                    Destroy(hit.collider.gameObject); // A chave continua a desaparecer do chão
                 }
             }
-            // 2. O laser bateu numa PORTA?
+            // 2. PORTA
             else if (hit.collider.CompareTag("Porta"))
             {
                 if (Input.GetKeyDown(KeyCode.E))
@@ -34,7 +45,15 @@ public class PlayerInteraction : MonoBehaviour
                     if (temChave == true)
                     {
                         MostrarMensagem("Usaste a chave e a porta abriu!");
-                        Destroy(hit.collider.gameObject); 
+                        
+                        if(somPorta != null) altifalante.PlayOneShot(somPorta);
+
+                        // --- A MÁGICA DA OPÇÃO A ---
+                        // Em vez de Destroy, a porta sobe 5 metros (Vector3.up * 5f)
+                        hit.collider.transform.Translate(Vector3.up * 5f);
+                        
+                        // Também podíamos desligar o colisor para garantir que não bates lá:
+                        // hit.collider.enabled = false;
                     }
                     else
                     {
@@ -45,16 +64,15 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    // --- FUNÇÕES QUE CONTROLAM O TEXTO NO ECRÃ ---
     void MostrarMensagem(string mensagem)
     {
-        textoNoEcra.text = mensagem; // Escreve o texto
-        CancelInvoke("ApagarMensagem"); // Cancela temporizadores antigos
-        Invoke("ApagarMensagem", 3f); // Manda apagar o texto passado 3 segundos!
+        textoNoEcra.text = mensagem; 
+        CancelInvoke("ApagarMensagem"); 
+        Invoke("ApagarMensagem", 3f); 
     }
 
     void ApagarMensagem()
     {
-        textoNoEcra.text = ""; // Limpa o ecrã
+        textoNoEcra.text = ""; 
     }
 }
