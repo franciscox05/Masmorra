@@ -3,54 +3,69 @@ using TMPro;
 
 public class LogicaKeypad : MonoBehaviour
 {
-    public TextMeshProUGUI visor; // Onde os números vão aparecer
-    public GameObject painelKeypad; // O próprio ecrã para se auto-desligar
-    public GameObject portaCofre; // A porta que isto vai abrir
+    [Header("Configurações do Cofre")]
+    public string codigoCorreto = "123"; 
+    private string inputAtual = "";
+    
+    [Header("Referências da UI")]
+    public TextMeshProUGUI textoDisplay; 
+    public GameObject painelTeclado; // NOVO: Para a mira não desaparecer!
+    
+    [Header("Referências do Mundo 3D")]
+    public GameObject tampaDoBau; 
 
-    string codigoIntroduzido = "";
-    string codigoCerto = "123"; // O CÓDIGO PARA GANHAR!
-
-    // Estas são as funções que os teus botões vão chamar!
-    public void Clicar1() { AdicionarNumero("1"); }
-    public void Clicar2() { AdicionarNumero("2"); }
-    public void Clicar3() { AdicionarNumero("3"); }
-
-    void AdicionarNumero(string num)
+    public void AdicionarNumero(string numero)
     {
-        codigoIntroduzido = codigoIntroduzido + num; // Junta o número
-        visor.text = codigoIntroduzido; // Mostra no ecrã
+        if (inputAtual.Length < codigoCorreto.Length)
+        {
+            inputAtual += numero;
+            AtualizarDisplay();
+        }
     }
 
-    public void ClicarOK()
+    public void ConfirmarCodigo()
     {
-        if (codigoIntroduzido == codigoCerto)
+        if (inputAtual == codigoCorreto)
         {
-            visor.text = "ABERTO!";
+            Debug.Log("Código Correto! O baú abriu!");
+            if (textoDisplay != null) textoDisplay.text = "Aberto";
             
-            // Abre a porta!
-            if(portaCofre != null)
+            // Abre a tampa do baú
+            if (tampaDoBau != null)
             {
-                portaCofre.transform.Translate(Vector3.up * 5f);
+                tampaDoBau.transform.Rotate(-80f, 0f, 0f);
+                Collider col = tampaDoBau.GetComponent<Collider>();
+                if (col != null) col.enabled = false;
             }
-            
-            // Chama a função de fechar o teclado passado 1.5 segundos
-            Invoke("FecharTeclado", 1.5f); 
+
+            // Esconde SÓ o teclado (a mira fica viva) e tranca o rato
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            if (painelTeclado != null) painelTeclado.SetActive(false); 
         }
         else
         {
-            visor.text = "ERRO!";
-            codigoIntroduzido = ""; // Limpa a memória para tentares outra vez
+            Debug.Log("Código Errado!");
+            if (textoDisplay != null) textoDisplay.text = "Erro";
+            Invoke("LimparInput", 1f);
         }
     }
 
-    void FecharTeclado()
+    public void LimparInput()
     {
-        painelKeypad.SetActive(false); // Esconde o teclado
-        visor.text = "";
-        codigoIntroduzido = "";
+        inputAtual = "";
+        AtualizarDisplay();
+    }
 
-        // Tranca o rato outra vez para poderes voltar a jogar o teu FPS!
+    private void AtualizarDisplay()
+    {
+        if (textoDisplay != null) textoDisplay.text = inputAtual;
+    }
+    
+    public void FecharTeclado()
+    {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        if (painelTeclado != null) painelTeclado.SetActive(false);
     }
 }

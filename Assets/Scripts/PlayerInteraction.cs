@@ -5,7 +5,6 @@ public class PlayerInteraction : MonoBehaviour
 {
     public float rayDistance = 3f;
 
-    // --- NOVO SISTEMA DE INVENTÁRIO (Permite ter várias ao mesmo tempo) ---
     public bool temChaveVermelha = false;
     public bool temChaveAzul = false;
     public bool temLanternaNoInventario = false; 
@@ -25,15 +24,11 @@ public class PlayerInteraction : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         
-        if (luzDaLanterna != null)
-        {
-            luzDaLanterna.enabled = false;
-        }
+        if (luzDaLanterna != null) luzDaLanterna.enabled = false;
     }
 
     void Update()
     {
-        // --- SISTEMA DA LANTERNA (TECLA F) ---
         if (Input.GetKeyDown(KeyCode.F))
         {
             if (temLanternaNoInventario && luzDaLanterna != null)
@@ -47,7 +42,6 @@ public class PlayerInteraction : MonoBehaviour
             }
         }
 
-        // Bloqueio se o teclado estiver aberto
         if (painelTecladoUI != null && painelTecladoUI.activeSelf) return;
 
         Ray ray = new Ray(transform.position, transform.forward);
@@ -61,14 +55,12 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     string nomeObjeto = hit.collider.gameObject.name;
 
-                    // 1. TECLADO
                     if (nomeObjeto == "PainelParede")
                     {
                         painelTecladoUI.SetActive(true);
                         Cursor.lockState = CursorLockMode.None;
                         Cursor.visible = true;
                     }
-                    // 2. APANHAR LANTERNA
                     else if (nomeObjeto == "LanternaFisica")
                     {
                         temLanternaNoInventario = true;
@@ -76,7 +68,6 @@ public class PlayerInteraction : MonoBehaviour
                         if (somLanterna != null) altifalante.PlayOneShot(somLanterna); 
                         Destroy(hit.collider.gameObject); 
                     }
-                    // 3. APANHAR CHAVES (Agora guarda individualmente)
                     else if (nomeObjeto == "ChaveVermelha")
                     {
                         temChaveVermelha = true;
@@ -93,7 +84,6 @@ public class PlayerInteraction : MonoBehaviour
                     }
                 }
             }
-            // --- SISTEMA DE PORTAS (Verifica se tens a chave certa no inventário) ---
             else if (hit.collider.CompareTag("Porta"))
             {
                 if (Input.GetKeyDown(KeyCode.E))
@@ -120,24 +110,23 @@ public class PlayerInteraction : MonoBehaviour
         MostrarMensagem("Porta " + cor + " aberta!");
         if (somPorta != null) altifalante.PlayOneShot(somPorta);
         
-        // Animação simples de subir a porta
-        portaObjeto.transform.Translate(Vector3.up * 5f);
+        // NOVA ANIMAÇÃO: Roda a porta 90 graus (como uma porta normal)
+        portaObjeto.transform.Rotate(0, 90f, 0); 
         portaObjeto.GetComponent<Collider>().enabled = false;
-
-        // Opcional: Gastar a chave (ficar false) ou manter (continuar true)
-        // Se quiseres que a chave desapareça após usar, descomenta a linha abaixo:
-        // if(cor == "Vermelha") temChaveVermelha = false; else temChaveAzul = false;
     }
 
     void MostrarMensagem(string mensagem)
     {
-        textoNoEcra.text = mensagem;
-        CancelInvoke("ApagarMensagem");
-        Invoke("ApagarMensagem", 3f);
+        if (textoNoEcra != null)
+        {
+            textoNoEcra.text = mensagem;
+            CancelInvoke("ApagarMensagem");
+            Invoke("ApagarMensagem", 3f);
+        }
     }
 
     void ApagarMensagem()
     {
-        textoNoEcra.text = "";
+        if (textoNoEcra != null) textoNoEcra.text = "";
     }
 }
