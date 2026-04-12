@@ -4,6 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Masmorra_Final.unity
+    guid: 3f7bee8b3c148984180be6f2a8bc8429
+  - enabled: 1
+    path: Assets/Scenes/Cena_Derrota.unity
+    guid: 5677b177faf5541408c49bb2f7a65f79
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

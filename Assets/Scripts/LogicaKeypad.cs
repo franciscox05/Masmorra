@@ -14,11 +14,11 @@ public class LogicaKeypad : MonoBehaviour
     [Header("Referências do Mundo 3D")]
     public GameObject tampaDoBau; 
 
-    public void AdicionarNumero(string numero)
+    public void AdicionarNumero(string numeroClicado)
     {
         if (inputAtual.Length < codigoCorreto.Length)
         {
-            inputAtual += numero;
+            inputAtual += numeroClicado;
             AtualizarDisplay();
         }
     }
@@ -68,4 +68,8 @@ public class LogicaKeypad : MonoBehaviour
         Cursor.visible = false;
         if (painelTeclado != null) painelTeclado.SetActive(false);
     }
+
+
+
+
 }
