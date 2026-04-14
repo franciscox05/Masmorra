@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MenuPrincipal.unity
+    guid: 108af910ca46d2848bf68369679e999d
+  - enabled: 1
     path: Assets/Scenes/Masmorra_Final.unity
     guid: 3f7bee8b3c148984180be6f2a8bc8429
   - enabled: 1

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -5,25 +6,25 @@ public class PlayerInteraction : MonoBehaviour
 {
     public float rayDistance = 3f;
 
-    public bool temChaveVermelha = false;
-    public bool temChaveAzul = false;
+    [Header("Inventário (O Bolso)")]
+    public List<string> chavesNoBolso = new List<string>();
     public bool temLanternaNoInventario = false; 
 
+    [Header("UI")]
     public TextMeshProUGUI textoNoEcra;
+    public GameObject painelTecladoUI;
 
+    [Header("Áudio e Luz")]
     public AudioSource altifalante;
     public AudioClip somChave;
     public AudioClip somPorta;
     public AudioClip somLanterna; 
-
     public Light luzDaLanterna;
-    public GameObject painelTecladoUI;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        
         if (luzDaLanterna != null) luzDaLanterna.enabled = false;
     }
 
@@ -49,73 +50,43 @@ public class PlayerInteraction : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, rayDistance))
         {
-            if (hit.collider.CompareTag("Interativo"))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    string nomeObjeto = hit.collider.gameObject.name;
+                string nomeObjeto = hit.collider.gameObject.name;
 
-                    if (nomeObjeto == "PainelParede")
-                    {
-                        painelTecladoUI.SetActive(true);
-                        Cursor.lockState = CursorLockMode.None;
-                        Cursor.visible = true;
-                    }
-                    else if (nomeObjeto == "LanternaFisica")
-                    {
-                        temLanternaNoInventario = true;
-                        MostrarMensagem("Apanhaste a Lanterna! Prime [F].");
-                        if (somLanterna != null) altifalante.PlayOneShot(somLanterna); 
-                        Destroy(hit.collider.gameObject); 
-                    }
-                    else if (nomeObjeto == "ChaveVermelha")
-                    {
-                        temChaveVermelha = true;
-                        MostrarMensagem("Apanhaste a Chave Vermelha!");
-                        if (somChave != null) altifalante.PlayOneShot(somChave);
-                        Destroy(hit.collider.gameObject);
-                    }
-                    else if (nomeObjeto == "ChaveAzul")
-                    {
-                        temChaveAzul = true;
-                        MostrarMensagem("Apanhaste a Chave Azul!");
-                        if (somChave != null) altifalante.PlayOneShot(somChave);
-                        Destroy(hit.collider.gameObject);
-                    }
+                if (nomeObjeto == "PainelParede")
+                {
+                    painelTecladoUI.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                 }
-            }
-            else if (hit.collider.CompareTag("Porta"))
-            {
-                if (Input.GetKeyDown(KeyCode.E))
+                else if (nomeObjeto == "LanternaFisica")
                 {
-                    string nomeDaPorta = hit.collider.gameObject.name;
-
-                    if (nomeDaPorta == "PortaVermelha")
-                    {
-                        if (temChaveVermelha) AbrirPorta(hit.collider.gameObject, "Vermelha");
-                        else MostrarMensagem("Precisas da Chave Vermelha!");
-                    }
-                    else if (nomeDaPorta == "PortaAzul")
-                    {
-                        if (temChaveAzul) AbrirPorta(hit.collider.gameObject, "Azul");
-                        else MostrarMensagem("Precisas da Chave Azul!");
-                    }
+                    temLanternaNoInventario = true;
+                    MostrarMensagem("Apanhaste a Lanterna! Prime [F].");
+                    if (somLanterna != null) altifalante.PlayOneShot(somLanterna); 
+                    Destroy(hit.collider.gameObject); 
+                }
+                else if (hit.collider.CompareTag("Chave"))
+                {
+                    chavesNoBolso.Add(nomeObjeto);
+                    // MENSAGENS PERSONALIZADAS PARA AS CHAVES
+                    string nomeBonito = nomeObjeto.Replace("Chave", "Chave ");
+                    MostrarMensagem("Apanhaste a " + nomeBonito + "!");
+                    
+                    if (somChave != null) altifalante.PlayOneShot(somChave);
+                    Destroy(hit.collider.gameObject);
+                }
+                else if (hit.collider.CompareTag("Porta"))
+                {
+                    PortaInteligente porta = hit.collider.GetComponent<PortaInteligente>();
+                    if (porta != null) porta.TentarAbrir(this);
                 }
             }
         }
     }
 
-    void AbrirPorta(GameObject portaObjeto, string cor)
-    {
-        MostrarMensagem("Porta " + cor + " aberta!");
-        if (somPorta != null) altifalante.PlayOneShot(somPorta);
-        
-        // NOVA ANIMAÇÃO: Roda a porta 90 graus (como uma porta normal)
-        portaObjeto.transform.Rotate(0, 90f, 0); 
-        portaObjeto.GetComponent<Collider>().enabled = false;
-    }
-
-    void MostrarMensagem(string mensagem)
+    public void MostrarMensagem(string mensagem)
     {
         if (textoNoEcra != null)
         {
@@ -128,5 +99,10 @@ public class PlayerInteraction : MonoBehaviour
     void ApagarMensagem()
     {
         if (textoNoEcra != null) textoNoEcra.text = "";
+    }
+
+    public void TocarSomPorta()
+    {
+        if (somPorta != null) altifalante.PlayOneShot(somPorta);
     }
 }

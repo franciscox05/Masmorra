@@ -6,7 +6,7 @@ public class LogicaTimer : MonoBehaviour
 {
     [Header("Configurações de Tempo")]
     public float tempoInicialEmSegundos = 600f; // 10 minutos por defeito
-    private float tempoRestante;
+    public float tempoRestante;
     private bool cronometroAtivo = false;
 
     [Header("Referências da UI")]

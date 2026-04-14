@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interativo
   - Porta
+  - Chave
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - SalaEscura
   - 
   - 
   - 
