@@ -440,9 +440,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7127013362249066590}
-        m_TargetAssemblyTypeName: LogicaKeypad, Assembly-CSharp
-        m_MethodName: AdicionarNumero
+      - m_Target: {fileID: 7445284345682508051}
+        m_TargetAssemblyTypeName: ControladorTeclado, Assembly-CSharp
+        m_MethodName: PremirBotao
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2174,71 +2174,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7178039193325278433, guid: 53ac7ce056616094cb0866450490c02d, type: 3}
   m_PrefabInstance: {fileID: 1265164820}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &92836436
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4710245704244623678, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
-      propertyPath: m_Name
-      value: PainelParede (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710245704244623678, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
-      propertyPath: m_TagString
-      value: Interativo
-      objectReference: {fileID: 0}
-    - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
-      propertyPath: m_RootOrder
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.8896244
-      objectReference: {fileID: 0}
-    - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.45669296
-      objectReference: {fileID: 0}
-    - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -54.348
-      objectReference: {fileID: 0}
-    - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
 --- !u!1001 &93548338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6685,9 +6620,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7127013362249066590}
-        m_TargetAssemblyTypeName: LogicaKeypad, Assembly-CSharp
-        m_MethodName: AdicionarNumero
+      - m_Target: {fileID: 7445284345682508051}
+        m_TargetAssemblyTypeName: ControladorTeclado, Assembly-CSharp
+        m_MethodName: PremirBotao
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8121,7 +8056,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.12
+      value: 1.55
       objectReference: {fileID: 0}
     - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8129,23 +8064,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.182
+      value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.8725082
       objectReference: {fileID: 0}
     - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.48859945
       objectReference: {fileID: 0}
     - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8153,7 +8088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -58.497
       objectReference: {fileID: 0}
     - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -8161,7 +8096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6343160729194299311, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
       propertyPath: m_Name
-      value: SquareChest_Top (1)
+      value: TampaBau2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9428,9 +9363,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7127013362249066590}
-        m_TargetAssemblyTypeName: LogicaKeypad, Assembly-CSharp
-        m_MethodName: AdicionarNumero
+      - m_Target: {fileID: 7445284345682508051}
+        m_TargetAssemblyTypeName: ControladorTeclado, Assembly-CSharp
+        m_MethodName: PremirBotao
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14044,7 +13979,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4710245704244623678, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2134996878}
   m_SourcePrefab: {fileID: 100100000, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
 --- !u!1001 &832284766
 PrefabInstance:
@@ -14800,35 +14738,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4710245704244623678, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
       propertyPath: m_Name
-      value: SquareChest_Bottom
+      value: Bau_2
       objectReference: {fileID: 0}
     - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.119085
+      value: 1.2211037
       objectReference: {fileID: 0}
     - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.005562192
+      value: 0.0055621862
       objectReference: {fileID: 0}
     - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.795688
+      value: 0.792646
       objectReference: {fileID: 0}
     - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.8725082
       objectReference: {fileID: 0}
     - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.48859945
       objectReference: {fileID: 0}
     - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14836,7 +14774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -58.497
       objectReference: {fileID: 0}
     - target: {fileID: 7207782105493462376, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -14845,7 +14783,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4710245704244623678, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 937107654}
+    - targetCorrespondingSourceObject: {fileID: 4710245704244623678, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 937107655}
+    - targetCorrespondingSourceObject: {fileID: 4710245704244623678, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 937107656}
   m_SourcePrefab: {fileID: 100100000, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
 --- !u!1001 &861221020
 PrefabInstance:
@@ -16022,71 +15969,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44e723b3d5b0e8c478e3b502b94369d5, type: 3}
---- !u!1001 &908176574
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
-      propertyPath: m_RootOrder
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.517
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.452
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.506
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.88244677
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.0149907265
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.47017244
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0009363219
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 1.567
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -56.108
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392406121855048728, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.713
-      objectReference: {fileID: 0}
-    - target: {fileID: 6343160729194299311, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
-      propertyPath: m_Name
-      value: SquareChest_Top (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6343160729194299311, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
-      propertyPath: m_TagString
-      value: Interativo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
 --- !u!1 &909301275
 GameObject:
   m_ObjectHideFlags: 0
@@ -16596,6 +16478,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3705028537381535112, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
   m_PrefabInstance: {fileID: 935434790}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &937107649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4710245704244623678, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
+  m_PrefabInstance: {fileID: 859738454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &937107654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937107649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3bff3babce43fc46bb1648d480ce1b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bau
+  senha: 6767
+  teclado: {fileID: 0}
+--- !u!111 &937107655
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937107649}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
+--- !u!114 &937107656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937107649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 882fcf6e01d745a38e7dbdea037b6a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DadosBau
+  senhaCorreta: 6767
+  tampaBau: {fileID: 1031643961}
 --- !u!1001 &940667659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17438,6 +17369,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53ac7ce056616094cb0866450490c02d, type: 3}
+--- !u!1 &1031643961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6343160729194299311, guid: 73a39b99cf32dc347850aa44b49a56c3, type: 3}
+  m_PrefabInstance: {fileID: 380096983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1037311382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18840,9 +18776,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7127013362249066590}
-        m_TargetAssemblyTypeName: LogicaKeypad, Assembly-CSharp
-        m_MethodName: AdicionarNumero
+      - m_Target: {fileID: 7445284345682508051}
+        m_TargetAssemblyTypeName: ControladorTeclado, Assembly-CSharp
+        m_MethodName: PremirBotao
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21281,6 +21217,14 @@ PrefabInstance:
       propertyPath: painelTecladoUI
       value: 
       objectReference: {fileID: 385646230502626582}
+    - target: {fileID: 5694597008922485290, guid: 918f2769cbbbcb44a840825e1702923f, type: 3}
+      propertyPath: painelTecladoUI2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694597008922485290, guid: 918f2769cbbbcb44a840825e1702923f, type: 3}
+      propertyPath: controladorTeclado
+      value: 
+      objectReference: {fileID: 7445284345682508051}
     - target: {fileID: 6482122389729687342, guid: 918f2769cbbbcb44a840825e1702923f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.09
@@ -22108,16 +22052,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7127013362249066590}
-        m_TargetAssemblyTypeName: LogicaKeypad, Assembly-CSharp
-        m_MethodName: FecharTeclado
+      - m_Target: {fileID: 7445284345682508051}
+        m_TargetAssemblyTypeName: ControladorTeclado, Assembly-CSharp
+        m_MethodName: Sair
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 3
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1300842970
@@ -23265,9 +23209,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7127013362249066590}
-        m_TargetAssemblyTypeName: LogicaKeypad, Assembly-CSharp
-        m_MethodName: AdicionarNumero
+      - m_Target: {fileID: 7445284345682508051}
+        m_TargetAssemblyTypeName: ControladorTeclado, Assembly-CSharp
+        m_MethodName: PremirBotao
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24380,9 +24324,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7127013362249066590}
-        m_TargetAssemblyTypeName: LogicaKeypad, Assembly-CSharp
-        m_MethodName: AdicionarNumero
+      - m_Target: {fileID: 7445284345682508051}
+        m_TargetAssemblyTypeName: ControladorTeclado, Assembly-CSharp
+        m_MethodName: PremirBotao
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -35196,9 +35140,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7127013362249066590}
-        m_TargetAssemblyTypeName: LogicaKeypad, Assembly-CSharp
-        m_MethodName: AdicionarNumero
+      - m_Target: {fileID: 7445284345682508051}
+        m_TargetAssemblyTypeName: ControladorTeclado, Assembly-CSharp
+        m_MethodName: PremirBotao
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -35881,6 +35825,25 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91ad7bf144749b04ab484a680630a040, type: 3}
+--- !u!1 &2134996873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4710245704244623678, guid: 566ca9ac4aee88e47906121eaa705eb1, type: 3}
+  m_PrefabInstance: {fileID: 819989269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2134996878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134996873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 882fcf6e01d745a38e7dbdea037b6a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DadosBau
+  senhaCorreta: 4791
+  tampaBau: {fileID: 530627111}
 --- !u!1001 &2140586441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35991,6 +35954,7 @@ GameObject:
   - component: {fileID: 7445284345682508050}
   - component: {fileID: 1093559720824518679}
   - component: {fileID: 7082217486431533425}
+  - component: {fileID: 7445284345682508051}
   m_Layer: 5
   m_Name: PainelKeypad
   m_TagString: Untagged
@@ -36042,9 +36006,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7127013362249066590}
-        m_TargetAssemblyTypeName: LogicaKeypad, Assembly-CSharp
-        m_MethodName: ConfirmarCodigo
+      - m_Target: {fileID: 7445284345682508051}
+        m_TargetAssemblyTypeName: ControladorTeclado, Assembly-CSharp
+        m_MethodName: Confirmar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36558,9 +36522,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7127013362249066590}
-        m_TargetAssemblyTypeName: LogicaKeypad, Assembly-CSharp
-        m_MethodName: AdicionarNumero
+      - m_Target: {fileID: 7445284345682508051}
+        m_TargetAssemblyTypeName: ControladorTeclado, Assembly-CSharp
+        m_MethodName: PremirBotao
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36796,9 +36760,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7127013362249066590}
-        m_TargetAssemblyTypeName: LogicaKeypad, Assembly-CSharp
-        m_MethodName: AdicionarNumero
+      - m_Target: {fileID: 7445284345682508051}
+        m_TargetAssemblyTypeName: ControladorTeclado, Assembly-CSharp
+        m_MethodName: PremirBotao
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37312,9 +37276,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7127013362249066590}
-        m_TargetAssemblyTypeName: LogicaKeypad, Assembly-CSharp
-        m_MethodName: AdicionarNumero
+      - m_Target: {fileID: 7445284345682508051}
+        m_TargetAssemblyTypeName: ControladorTeclado, Assembly-CSharp
+        m_MethodName: PremirBotao
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37437,6 +37401,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7445284345682508051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385646230502626582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3359788704aa4e7087f56599cd5f7037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControladorTeclado
+  textoPlaceholder: "Escreva a senha correta para abrir o ba\xFA"
+  visor: {fileID: 3038376683689119069}
+  painelUI: {fileID: 385646230502626582}
 --- !u!222 &7537177894737339632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37698,7 +37677,6 @@ SceneRoots:
   - {fileID: 879953840}
   - {fileID: 1153059603}
   - {fileID: 819989269}
-  - {fileID: 92836436}
   - {fileID: 461766482}
   - {fileID: 2120688417}
   - {fileID: 1613770707}
@@ -37708,7 +37686,6 @@ SceneRoots:
   - {fileID: 1874353075}
   - {fileID: 1866929792}
   - {fileID: 53471121}
-  - {fileID: 908176574}
   - {fileID: 1377049353}
   - {fileID: 873250006}
   - {fileID: 1872210479}
