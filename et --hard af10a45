@@ -1,0 +1,39 @@
+[33maf10a45[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfrancisco-dev[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Finalizado: Puzzle do pilar e interação com o livro da Sala 5
+[33m4b7da8b[m[33m ([m[1;31morigin/francisco-dev[m[33m, [m[1;32mmaster[m[33m)[m feat: Adição de um segundo baú implicando reformulação no sistema de baús, com teclado funcional e feedback visual
+[33m5c1ca7a[m Merge branch 'master' of https://github.com/franciscox05/TP1_Escape_Room into francisco-dev
+[33m0826916[m Merge branch 'francisco-dev' of https://github.com/franciscox05/TP1_Escape_Room into francisco-dev
+[33m8a06e81[m[33m ([m[1;31morigin/afonso-dev[m[33m)[m Finalização das mecânicas da sala e integração de áudio
+[33m78dd2f7[m Asset novo para as chaves das portas
+[33md25788b[m Puzzle VITAL da Sala 2 terminado e funcional
+[33m615a207[m Adição de um collider para aparecer texto quando sai da masmorra
+[33m91da41e[m Arquitetura: Mapa final decorado (ainda a melhorar)
+[33m5e91baa[m Implementação do sistema de Game Over (Painel Derrota) ligado ao cronómetro. Resolução de bugs de fuga de luz com criação de novo Lighting Profile e Baking da iluminação para a sala escura. Adição de portas e chaves extra para progressão de nível.
+[33m631998b[m Finalizacao total do Keypad, inicialização da junção das duas cenas na cena final e sistema de vitoria/derrota
+[33m32ecd04[m Merge branch 'afonso-dev' into francisco-dev
+[33m9c386ff[m Adicionado o Timer
+[33m6936636[m[33m ([m[1;32mafonso-dev[m[33m)[m Disposição das Salas do Scape Room
+[33mdd5a35d[m Finalização da noite: baú a abrir, portas a rodar e UI corrigida
+[33m64fa992[m Fix: Inventário agora suporta múltiplas chaves e lanterna
+[33mf8a03c7[m Merge pull request #4 from franciscox05/francisco-dev
+[33mb81f23d[m Feat: Sistema de chaves, puzzle Keypad e lanterna interativa com sons
+[33m2dc2d3a[m Merge branch 'afonso-dev'
+[33m8e97db2[m Arquitetura: Ajustes na disposição das salas do mapa
+[33m5b9456b[m Merge pull request #3 from franciscox05/francisco-dev
+[33me6f1a59[m Feat: Adicionado áudio, rato oculto e animação da porta a subir
+[33m11a4083[m Arquitetura: Adicionados assets de masmorra e decoracao da sala
+[33m76f52d0[m Arquitetura: Sala base criada e teto removido com sucesso
+[33mcc4261d[m WIP: Sala base ProBuilder criada (8x4x10)
+[33me71c549[m Merge pull request #2 from franciscox05/francisco-dev
+[33mdef83ed[m Feat: Adicionada Mira (Crosshair) e sistema de mensagens UI no ecrã
+[33m52d7a78[m Feat: Adicionado sistema de inventário (booleano) e lógica de porta trancada
+[33m1ae92b2[m Merge: Resolvidos conflitos aceitando a versao da master
+[33m9ef9807[m Chore: Guardar configuracoes automaticas do Unity
+[33mfd0ba80[m Merge branch 'francisco-dev'
+[33md5fccc6[m Fix: Guardar cena atualizada e Tag Interativo
+[33mb05c040[m Feat: Adicionado Raycast para interagir com objetos e apanhar a chave
+[33m500b4f4[m Fix: Resolvidos conflitos de configuracoes automaticas do Unity
+[33m0a6bc53[m Feat: Adicionado sistema de visão em 1ª pessoa com o rato (MouseLook)
+[33mcc317a5[m Fix: Adicionados materiais CorChao e CorPlayer para corrigir texturas rosas
+[33me890afb[m Feat: Adicionado movimento do jogador com Rigidbody, Física e câmara na cabeça
+[33me756fb4[m initial commit
+[33m70af502[m Initial commit
