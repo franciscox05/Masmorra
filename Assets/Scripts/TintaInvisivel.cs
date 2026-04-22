@@ -3,39 +3,56 @@ using TMPro;
 
 public class TintaInvisivel : MonoBehaviour
 {
-    public Transform lanternaJogador; // O objeto da lanterna para saber a direção
-    public Light luzLanterna;         // A luz para saber se está ligada
     private TextMeshPro texto;
+    private Light luzLanterna;
+    private Transform camTransform;
+
+    public float distanciaRevelar = 8f;
+    public float anguloFoco = 35f;
+    public float velocidadeFade = 10f;
 
     void Start()
     {
         texto = GetComponent<TextMeshPro>();
-        // Começa totalmente transparente (invisível)
-        texto.color = new Color(texto.color.r, texto.color.g, texto.color.b, 0);
+        camTransform = Camera.main.transform;
+
+        // Procura a luz que está dentro do Player
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            // Procura o componente Light nos filhos do Player
+            luzLanterna = player.GetComponentInChildren<Light>();
+        }
+
+        // Começa invisível
+        if (texto != null) {
+            Color c = texto.color;
+            c.a = 0f;
+            texto.color = c;
+        }
     }
 
     void Update()
-    {
-        // Verifica se a lanterna existe e se a luz está ligada no momento
-        if (luzLanterna != null && luzLanterna.enabled && luzLanterna.gameObject.activeInHierarchy)
-        {
-            float distancia = Vector3.Distance(lanternaJogador.position, transform.position);
-            Vector3 direcaoParaTexto = (transform.position - lanternaJogador.position).normalized;
-            float angulo = Vector3.Angle(lanternaJogador.forward, direcaoParaTexto);
+{
+    if (texto == null || luzLanterna == null || camTransform == null) return;
 
-            // Se estiver perto (menos de 7 metros) e dentro do cone de luz (ângulo)
-            if (distancia < 7f && angulo < (luzLanterna.spotAngle / 2))
-            {
-                texto.color = new Color(texto.color.r, texto.color.g, texto.color.b, 1); // Fica visível
-            }
-            else
-            {
-                texto.color = new Color(texto.color.r, texto.color.g, texto.color.b, 0); // Fica invisível
-            }
-        }
-        else
+    float alvoAlpha = 0f;
+
+    if (luzLanterna.enabled && luzLanterna.gameObject.activeInHierarchy)
+    {
+        float dist = Vector3.Distance(transform.position, camTransform.position);
+        Vector3 direcao = (transform.position - camTransform.position).normalized;
+        float angulo = Vector3.Angle(camTransform.forward, direcao);
+
+        // Adicionámos uma pequena margem para evitar o piscar nas bordas
+        if (dist < distanciaRevelar + 1f && angulo < anguloFoco + 5f)
         {
-            texto.color = new Color(texto.color.r, texto.color.g, texto.color.b, 0);
+            alvoAlpha = 1f;
         }
     }
+
+    // Se o alvo for 1, ele sobe. Se for 0, ele desce.
+    float novoAlpha = Mathf.MoveTowards(texto.color.a, alvoAlpha, velocidadeFade * Time.deltaTime);
+    texto.color = new Color(texto.color.r, texto.color.g, texto.color.b, novoAlpha);
+}
 }
