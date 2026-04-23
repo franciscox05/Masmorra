@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Cursor.lockState == CursorLockMode.None) return;
         // O teclado (teclas WASD ou Setas) lê-se no Update para ser responsivo
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveZ = Input.GetAxisRaw("Vertical");

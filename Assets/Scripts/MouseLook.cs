@@ -15,13 +15,16 @@ public class MouseLook : MonoBehaviour
 
     void Update()
     {
+        // NOVIDADE: Se o rato estiver solto (Menus/Baús), não roda a câmara
+        if (Cursor.lockState == CursorLockMode.None) return;
+
         // Lê os movimentos do rato
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
         // Rotação vertical (Cima/Baixo) na câmara
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f); // Impede de olhar além dos 90 graus
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f); 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
         // Rotação horizontal (Esquerda/Direita) no corpo do jogador
