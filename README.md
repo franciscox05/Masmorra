@@ -46,6 +46,10 @@ Uma experiência de **Escape Room** em primeira pessoa desenvolvida no Unity. O 
 5. Clica em **"Commit changes..."** no fundo da página para guardar.
 
 
+### Trabalho realizado por:
+1. 33400 Francisco Gomes.
+2. 33157 Afonso Barbosa.
+
 ## 📂 Como Correr o Projeto
 
 1. Faça o clone do repositório:
