@@ -12,8 +12,8 @@ public class LogicaPuzzleVital : MonoBehaviour
     public GameObject correntes; 
 
     [Header("Configuração de Áudio (Solução Unity 6)")]
-    public AudioSource leitorDeSom; // Arraste o componente Audio Source para aqui
-    public AudioClip ficheiroDeSom; // Arraste o ficheiro "somCorrentes" da pasta Audio para aqui
+    public AudioSource leitorDeSom; // Componente Audio Source
+    public AudioClip ficheiroDeSom; // Ficheiro de Audio
 
     [Header("Controlos do Jogador")]
     public MonoBehaviour scriptMovimento; 
@@ -45,9 +45,6 @@ public class LogicaPuzzleVital : MonoBehaviour
     {
         Debug.Log("Puzzle resolvido!");
 
-        // ESTA É A LINHA MÁGICA:
-        // Ela toca o som na posição da câmara, por isso ouves sempre, 
-        // mesmo que o painel do puzzle seja fechado logo a seguir!
         if (ficheiroDeSom != null)
         {
             AudioSource.PlayClipAtPoint(ficheiroDeSom, Camera.main.transform.position);
@@ -59,7 +56,7 @@ public class LogicaPuzzleVital : MonoBehaviour
             correntes.SetActive(false); 
         }
 
-        FecharPuzzle(); // Agora já podes fechar à vontade!
+        FecharPuzzle(); 
     }
 
     public void AbrirPuzzle()

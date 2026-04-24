@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InteracaoSimbolo : MonoBehaviour
 {
-    public int meuId; // Vais definir 0, 1, 2 ou 3 no Inspector
+    public int meuId; // Definir 0, 1, 2 ou 3
     public LogicaPilarFinal scriptPilar;
 
     // Esta função deteta o clique do rato (funciona devido ao Mesh Collider)

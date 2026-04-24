@@ -3,7 +3,7 @@ using UnityEngine;
 public class GatilhoLivro : MonoBehaviour
 {
     public LogicaPuzzleVital scriptDoPuzzle;
-    public Transform player; // Arrastas o teu Player para aqui
+    public Transform player; 
     public float distanciaParaAbrir = 3f; // Distância máxima para interagir
 
     void Update()

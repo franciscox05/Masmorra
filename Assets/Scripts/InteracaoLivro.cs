@@ -4,7 +4,7 @@ using TMPro;
 public class InteracaoLivro : MonoBehaviour
 {
     [Header("Configurações de UI")]
-    public GameObject painelDoLivro; // Arrastas o Panel aqui no Inspector
+    public GameObject painelDoLivro; 
 
     private bool estaPerto = false;
     private bool livroAberto = false; // Controla se o UI está visível
@@ -33,9 +33,6 @@ public class InteracaoLivro : MonoBehaviour
         // Liberta o rato para o jogador
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-
-        // NOTA: Se o movimento do personagem ainda estiver ativo, 
-        // podes precisar de o desativar aqui (ex: playerMovement.enabled = false).
     }
 
     public void FecharLivro()

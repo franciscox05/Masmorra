@@ -22,7 +22,6 @@ public class Bau : MonoBehaviour
 
     public void AbrirCadeado()
     {
-        // Em vez de SetActive(false), puxamos o gatilho!
         if (animatorDoBau != null)
         {
             animatorDoBau.SetTrigger("Abrir");

@@ -47,10 +47,10 @@ public class LogicaTimer : MonoBehaviour
         float minutos = Mathf.FloorToInt(tempoParaMostrar / 60);
         float segundos = Mathf.FloorToInt(tempoParaMostrar % 60);
 
-        // Formata a string para ter sempre dois dígitos (ex: 09:05 em vez de 9:5)
+        // Formata a string para ter sempre dois dígitos
         textoTimer.text = string.Format("{0:00}:{1:00}", minutos, segundos);
         
-        // DICA: Se faltar menos de 30 segundos, podemos pôr o texto a vermelho
+        // Se faltar menos de 30 segundos, podemos pôr o texto a vermelho
         if (tempoParaMostrar < 30f) textoTimer.color = Color.red;
     }
 

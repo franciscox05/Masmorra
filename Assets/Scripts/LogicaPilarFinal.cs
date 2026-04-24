@@ -10,7 +10,7 @@ public class LogicaPilarFinal : MonoBehaviour
     public GameObject objetoParaAtivar;
 
     [Header("Ficheiros de Som (.mp3 / .wav)")]
-    public AudioClip somClique;   // Aqui vão aparecer os buraquinhos novos!
+    public AudioClip somClique;   
     public AudioClip somSucesso;
     public AudioClip somErro;
 
@@ -22,7 +22,7 @@ public class LogicaPilarFinal : MonoBehaviour
         if (id == sequenciaCorreta[passoAtual])
         {
             passoAtual++;
-            // Usamos PlayOneShot para tocar o ficheiro diretamente
+            // Usei PlayOneShot para tocar o ficheiro diretamente
             if (fonteAudio != null && somClique != null) 
                 fonteAudio.PlayOneShot(somClique);
 

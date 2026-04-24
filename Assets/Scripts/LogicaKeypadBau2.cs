@@ -6,7 +6,7 @@ public class LogicaKeypadBau2 : MonoBehaviour
     [Header("Configurações do Cofre")]
     public string codigoCorreto = "4791"; // Mudei para o teu código da sala escura!
     private string inputAtual = "";
-    private int limiteDigitos = 10; // NOVO: Limite de 10 dígitos
+    private int limiteDigitos = 10; // Limite de 10 dígitos
     
     [Header("Referências da UI")]
     public TextMeshProUGUI textoDisplay; 
@@ -14,8 +14,8 @@ public class LogicaKeypadBau2 : MonoBehaviour
     
     [Header("Referências do Mundo 3D")]
     public GameObject tampaDoBau; 
-    public GameObject chaveK4; // NOVO: A chave que vai aparecer
-    public PlayerInteraction jogador; // NOVO: Para podermos enviar o aviso para o ecrã
+    public GameObject chaveK4; // A chave que vai aparecer
+    public PlayerInteraction jogador; // Para podermos enviar o aviso para o ecrã
 
     void Start()
     {
@@ -25,7 +25,7 @@ public class LogicaKeypadBau2 : MonoBehaviour
 
     public void AdicionarNumero(string numeroClicado)
     {
-        // NOVO: Verifica se ainda não passou dos 10 dígitos
+        // Verifica se ainda não passou dos 10 dígitos
         if (inputAtual.Length < limiteDigitos)
         {
             inputAtual += numeroClicado;
@@ -39,10 +39,10 @@ public class LogicaKeypadBau2 : MonoBehaviour
         {
             if (textoDisplay != null) textoDisplay.text = "Aberto";
             
-            // NOVO: Usa o script do jogador para avisar no ecrã principal
+            // Usa o script do jogador para avisar no ecrã principal
             if (jogador != null) jogador.MostrarMensagem("Código Correto! O baú abriu.");
             
-            // Abre a tampa do baú (Tua animação original!)
+            // Abre a tampa do baú
             if (tampaDoBau != null)
             {
                 tampaDoBau.transform.Rotate(-80f, 0f, 0f);
@@ -50,7 +50,7 @@ public class LogicaKeypadBau2 : MonoBehaviour
                 if (col != null) col.enabled = false;
             }
 
-            // NOVO: Faz a Chave K4 aparecer
+            // Faz a Chave K4 aparecer
             if (chaveK4 != null) chaveK4.SetActive(true);
 
             // Esconde o teclado e tranca o rato
