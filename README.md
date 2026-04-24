@@ -38,6 +38,13 @@ Uma experiência de **Escape Room** em primeira pessoa desenvolvida no Unity. O 
 * `MouseLook.cs` & `PlayerMovement.cs`: Controlos de câmara e movimento, com bloqueio automático da câmara quando o jogador interage com painéis de código.
 
 ---
+### Como atualizar no GitHub:
+1. Vai ao teu repositório no GitHub.
+2. Clica no ficheiro `README.md`.
+3. Clica no ícone do **lápis** (Edit) no canto superior direito.
+4. Apaga o que lá está e cola este código novo.
+5. Clica em **"Commit changes..."** no fundo da página para guardar.
+
 
 ## 📂 Como Correr o Projeto
 
