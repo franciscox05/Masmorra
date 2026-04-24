@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        // Vai buscar o Rigidbody que adicionaste há pouco na cápsula
+        // Vai buscar o Rigidbody que foi adicionado na cápsula
         rb = GetComponent<Rigidbody>();
     }
 

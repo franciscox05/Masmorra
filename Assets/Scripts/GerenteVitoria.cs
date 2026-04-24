@@ -9,7 +9,7 @@ public class GerenteVitoria : MonoBehaviour
     public TextMeshProUGUI textoScore;
 
     [Header("Referências do Jogo")]
-    public LogicaTimer scriptDoTimer; // O teu script que tem o tempo
+    public LogicaTimer scriptDoTimer;
 
     public void FinalizarJogo()
     {
@@ -33,7 +33,7 @@ public class GerenteVitoria : MonoBehaviour
 
     public void Reiniciar()
     {
-        // MUITO IMPORTANTE: Descongelar o tempo antes de mudar de cena!
+        // Descongelar o tempo antes de mudar de cena!
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

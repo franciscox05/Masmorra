@@ -48,7 +48,7 @@ public class GerenciadorPause : MonoBehaviour
 
     public void IrParaMenu()
     {
-        Time.timeScale = 1f; // MUITO IMPORTANTE: Garante que o tempo volta ao normal ao sair
+        Time.timeScale = 1f; // Garante que o tempo volta ao normal ao sair
         SceneManager.LoadScene("MenuPrincipal"); // Ajusta para o nome da tua cena de menu
     }
 }
